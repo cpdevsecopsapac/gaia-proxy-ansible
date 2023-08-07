@@ -1,0 +1,10 @@
+---
+- name: Playbook name
+  hosts: 
+    - check_point2
+    - check_point
+  connection: httpapi
+  tasks:
+    - name: task to have network
+      check_point.gaia.cp_gaia_hostname:
+        name: "hq_gw"
